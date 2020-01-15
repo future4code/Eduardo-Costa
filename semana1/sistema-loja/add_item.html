@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Novo produto</title>
+</head>
+
+<body>
+    <h1>Novo Produto</h1>
+
+    <form>
+        <label for="sku">SKU:</label><br>
+        <input type="number" name="sku" id="sku"><br><br>
+
+        <label for="cat">Categoria:</label><br>
+        <input type="text" name="cat" id="depto" list="cats"><br><br>
+        <datalist id="cats">
+            <option value="Livros">
+            <option value="CDs">
+        </datalist>
+
+        <label for="desc">Título:</label> <br>
+        <input type="text" name="desc" id="desc"><br><br>
+
+        <label for="sell_price">Preço de venda:</label><br>
+        <input type="number" name="sell_price" id="sell_price"><br><br>
+
+        <label for="qtd">Quantidade:</label><br>
+        <input type="number" name="qtd" id="qtd"><br><br>
+
+        <label for="pic">Imagem:</label><br>
+        <input type="file" name="pic" id="pic"><br><br>
+
+        <br>
+        <input type="submit" name="rec" id="rec" value="Cadastrar"><br>
+
+    </form>
+
+    <br>
+    <br>
+
+    <a href="index.html">Página inicial</a>
+
+</body>
+
+</html>
