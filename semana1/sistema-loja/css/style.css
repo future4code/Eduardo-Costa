@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    background-color: lightgoldenrodyellow;
+    padding-left: 0;
+    text-align: left;
+}
+body {
+    background-color: lightgrey;
+    text-align: center;
+}
+footer {
+    background-color: slategrey;
+    padding-top: 15px;
+    text-align: right;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+div.menu  {
+display: inline-flex;
+padding: 10px;
+background-color: lightyellow;
+width: auto;
+}
+.menu {
+    text-align: center;
+}
+.conteudo {
+    padding-top: 20px;
+}
+form {
+    text-align: left;
+}
+th {
+    background-color: seagreen;
+}
+tr {
+    background-color: lightseagreen;
+}
