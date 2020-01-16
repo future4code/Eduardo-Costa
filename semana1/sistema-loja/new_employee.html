@@ -5,48 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Novo colaborador</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Página inicial</title>
 </head>
 
 <body>
-    <h1>Novo colaborador</h1>
-
-    <form>
-        <label for="id">ID:</label><br>
-        <input type="text" name="id" id="id"><br><br>
-
-        <label for="depto">Setor:</label><br>
-        <input type="text" name="depto" id="depto" list="deptos"><br><br>
-        <datalist id="deptos">
-            <option value="Administrativo">
-            <option value="Vendas">
-            <option value="Logística">
-        </datalist>
-
-        <label for="name">Nome:</label> <br>
-        <input type="text" name="name" id="name"><br><br>
-
-        <label for="bday">Nascimento:</label><br>
-        <input type="date" name="bday" id="bday"><br><br>
-
-        <label for="years">Idade:</label><br>
-        <input type="number" name="years" id="years"><br><br>
-
-        <label for="admission">Admissão:</label><br>
-        <input type="date" name="admission" id="admission"><br><br>
-
-        <label for="pic">Foto:</label><br>
-        <input type="file" name="pic" id="pic"><br><br>
-
+    <header>
+        <h1>Antiga Amazon</h1>
+        <p><i>Sistema interno de administração</i></p>
         <br>
-        <input type="submit" name="rec" id="rec" value="Cadastrar"><br>
+    </header>
 
-    </form>
+    <div class="menu">
+        <a href="new_employee.html">Novo colaborador</a>
+        <p> | </p>
+        <a href="add_item.html">Novo produto</a>
+        <p> | </p>
+        <a href="new_order.html"><b>Nova Venda</b></a>
+        <p> | </p>
+        <a href="stock.html">Estoque atual</a>
+        <p> | </p>
+        <a href="employees.html">Colaboradores</a>
+        <p> | </p>
+        <a href="orders.html">Pedidos</a>
 
-    <br>
-    <br>
+    </div>
+    <div>
+        <h1>Novo colaborador</h1>
 
-    <a href="index.html">Página inicial</a>
+        <form>
+            <label for="id">ID:</label><br>
+            <input type="text" name="id" id="id"><br><br>
+    
+            <label for="depto">Setor:</label><br>
+            <input type="text" name="depto" id="depto" list="deptos"><br><br>
+            <datalist id="deptos">
+                <option value="Administrativo">
+                <option value="Vendas">
+                <option value="Logística">
+            </datalist>
+    
+            <label for="name">Nome:</label> <br>
+            <input type="text" name="name" id="name"><br><br>
+    
+            <label for="bday">Nascimento:</label><br>
+            <input type="date" name="bday" id="bday"><br><br>
+    
+            <label for="years">Idade:</label><br>
+            <input type="number" name="years" id="years"><br><br>
+    
+            <label for="admission">Admissão:</label><br>
+            <input type="date" name="admission" id="admission"><br><br>
+    
+            <label for="pic">Foto:</label><br>
+            <input type="file" name="pic" id="pic"><br><br>
+    
+            <br>
+            <input type="submit" name="rec" id="rec" value="Cadastrar"><br>
+    
+        </form>
+    
+        <br>
+        <br>
+    
+        <a href="index.html">Página inicial</a>
+        </div>
 
 </body>
 

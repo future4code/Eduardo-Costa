@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Página inicial</title>
+</head>
+
+<body>
+    <header>
+        <h1>Antiga Amazon</h1>
+        <p><i>Sistema interno de administração</i></p>
+        <br>
+    </header>
+
+    <div class="menu">
+        <a href="new_employee.html">Novo colaborador</a>
+        <p> | </p>
+        <a href="add_item.html">Novo produto</a>
+        <p> | </p>
+        <a href="new_order.html"><b>Nova Venda</b></a>
+        <p> | </p>
+        <a href="stock.html">Estoque atual</a>
+        <p> | </p>
+        <a href="employees.html">Colaboradores</a>
+        <p> | </p>
+        <a href="orders.html">Pedidos</a>
+
+    </div>
+
+    <div>
+        <h1>Nova venda</h1>
+
+        <form>
+
+            <label for="user">Vendedor:</label><br>
+            <input type="text" name="user" id="user" list="users"><br><br>
+            <datalist id="users">
+                <option value="Jeff Bezos">
+                <option value="Walter Mercado">
+                <option value="Roberto Faria">
+                <option value="Maria Almeida">
+            </datalist>
+
+            <label for="sku">SKU:</label><br>
+            <input type="text" name="sku" id="sku" list="itens"><br><br>
+            <datalist id="itens">
+                <option value="001">
+                <option value="002">
+                <option value="003">
+                <option value="004">
+                <option value="005">
+                <option value="006">    
+            </datalist>
+
+
+            <label for="sell_price">Preço de venda:</label><br>
+            <input type="number" name="sell_price" id="sell_price"><br><br>
+
+            <label for="qtd">Quantidade:</label><br>
+            <input type="number" name="qtd" id="qtd"><br><br>
+
+
+            <br>
+            <input type="submit" name="rec" id="rec" value="Adicionar item"><br>
+            <br>
+            <br>
+            <p>Itens adicionados:</p>
+            <table>
+                <tr>
+                    <th>SKU</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                </tr>
+                <tr>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+            </table><br>
+
+            <p>Total:</p> <p id="total"><b>R$ 0,00</b></p><br>
+            <p>Forma de pagamento:</p>
+            <input type="radio" name="dinheiro" value="dinheiro"> Dinheiro
+            <input type="radio" name="cartao" value="cartao"> Cartão<br>
+            <input type="submit" name="rec" id="rec" value="Finalizar pedido"><br>
+
+        </form>
+
+        <br>
+        <br>
+
+        <a href="index.html">Página inicial</a>
+    </div>
+
+</body>
+
+</html>
