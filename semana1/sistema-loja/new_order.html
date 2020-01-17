@@ -6,33 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <title>Página inicial</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Amazon teste</title>
 </head>
 
 <body>
     <header>
         <h1>Antiga Amazon</h1>
-        <p><i>Sistema interno de administração</i></p>
-        <br>
+        <p><i>Sistema interno de administração</i></p><br>
+        <nav>
+            <p>|</p>
+            <a href="index.html">Página inicial</a>
+            <p>|</p>
+            <a href="new_employee.html">Novo colaborador</a>
+            <p>|</p>
+            <a href="new_item.html">Novo produto</a>
+            <p>|</p>
+            <a href="new_order.html">Nova Venda</a>
+            <p>|</p>
+            <a href="stock.html">Estoque atual</a>
+            <p>|</p>
+            <a href="employees.html">Colaboradores</a>
+            <p>|</p>
+            <a href="orders.html">Pedidos</a>
+            <p>|</p>
+        </nav>
     </header>
-
-    <div class="menu">
-        <a href="new_employee.html">Novo colaborador</a>
-        <p> | </p>
-        <a href="add_item.html">Novo produto</a>
-        <p> | </p>
-        <a href="new_order.html"><b>Nova Venda</b></a>
-        <p> | </p>
-        <a href="stock.html">Estoque atual</a>
-        <p> | </p>
-        <a href="employees.html">Colaboradores</a>
-        <p> | </p>
-        <a href="orders.html">Pedidos</a>
-
-    </div>
-
-    <div>
+    <aside>
+    </aside>
+    <article class="centro">
+        <br>
         <h1>Nova venda</h1>
 
         <form>
@@ -86,22 +89,21 @@
                     <td>...</td>
                     <td>...</td>
                 </tr>
-            </table><br>
+            </table><br><br><br>
 
             <p>Total:</p> <p id="total"><b>R$ 0,00</b></p><br>
             <p>Forma de pagamento:</p>
             <input type="radio" name="dinheiro" value="dinheiro"> Dinheiro
             <input type="radio" name="cartao" value="cartao"> Cartão<br>
-            <input type="submit" name="rec" id="rec" value="Finalizar pedido"><br>
+            <input type="submit" name="rec" id="finaliza" value="Finalizar pedido"><br>
 
         </form>
 
-        <br>
-        <br>
-
-        <a href="index.html">Página inicial</a>
-    </div>
-
+    
+    </article>
+    <footer>
+        <p>Copyright © 1994 de Jeff Bezos. Todos os direitos reservados</p>
+    </footer>
 </body>
 
 </html>

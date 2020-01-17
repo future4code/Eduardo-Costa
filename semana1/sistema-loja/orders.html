@@ -7,112 +7,135 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <title>Página inicial</title>
+    <script src="js/filtro.js"></script>
+    <title>Amazon teste</title>
 </head>
 
 <body>
     <header>
         <h1>Antiga Amazon</h1>
-        <p><i>Sistema interno de administração</i></p>
-        <br>
+        <p><i>Sistema interno de administração</i></p><br>
+        <nav>
+            <p>|</p>
+            <a href="index.html">Página inicial</a>
+            <p>|</p>
+            <a href="new_employee.html">Novo colaborador</a>
+            <p>|</p>
+            <a href="new_item.html">Novo produto</a>
+            <p>|</p>
+            <a href="new_order.html">Nova Venda</a>
+            <p>|</p>
+            <a href="stock.html">Estoque atual</a>
+            <p>|</p>
+            <a href="employees.html">Colaboradores</a>
+            <p>|</p>
+            <a href="orders.html">Pedidos</a>
+            <p>|</p>
+        </nav>
     </header>
-
-    <div class="menu">
-        <a href="new_employee.html">Novo colaborador</a>
-        <p> | </p>
-        <a href="add_item.html">Novo produto</a>
-        <p> | </p>
-        <a href="new_order.html"><b>Nova Venda</b></a>
-        <p> | </p>
-        <a href="stock.html">Estoque atual</a>
-        <p> | </p>
-        <a href="employees.html">Colaboradores</a>
-        <p> | </p>
-        <a href="orders.html">Pedidos</a>
-
-    </div>
-    <div>
+    <aside>
+    </aside>
+    <article class="centro">
+        <br>
         <h1>Listagem de vendas</h1>
 
-    <table border="1px">
-        <tr>
-            <th>Pedido</th>
-            <th>Data</th>
-            <th>Valor</th>
-            <th>Status</th>
-            <th>Detalhes</th>
-        </tr>
-        <tr>
-            <td>001</td>
-            <td>20/07/1994</td>
-            <td>R$ 48,00</td>
-            <td>Concluído</td>
-            <td><i><u>Detalhes do pedido</u></i></td>
-        </tr>
-        <tr>
-            <td>002</td>
-            <td>21/07/1994</td>
-            <td>R$ 33,00</td>
-            <td>Concluído</td>
-            <td><i><u>Detalhes do pedido</u></i></td>
-        </tr>
-        <tr>
-            <td>003</td>
-            <td>22/07/1994</td>
-            <td>R$ 35,00</td>
-            <td>Concluído</td>
-            <td><i><u>Detalhes do pedido</u></i></td>
-        </tr>
-        <tr>
-            <td>004</td>
-            <td>23/07/1994</td>
-            <td>R$ 40,00</td>
-            <td>Concluído</td>
-            <td><i><u>Detalhes do pedido</u></i></td>
-        </tr>
-        <tr>
-            <td>005</td>
-            <td>24/07/1994</td>
-            <td>R$ 48,00</td>
-            <td>Concluído</td>
-            <td><i><u>Detalhes do pedido</u></i></td>
-        </tr>
-        <tr>
-            <td>006</td>
-            <td>24/07/1994</td>
-            <td>R$ 150,00</td>
-            <td>Concluído</td>
-            <td><i><u>Detalhes do pedido</u></i></td>
-        </tr>
-        <tr>
-            <td>007</td>
-            <td>25/07/1994</td>
-            <td>R$ 390,00</td>
-            <td>Concluído</td>
-            <td><i><u>Detalhes do pedido</u></i></td>
-        </tr>
-        <tr>
-            <td>008</td>
-            <td>25/07/1994</td>
-            <td>R$ 56,00</td>
-            <td>Concluído</td>
-            <td><i><u>Detalhes do pedido</u></i></td>
-        </tr>
-        <tr>
-            <td>009</td>
-            <td>26/07/1994</td>
-            <td>R$ 23,00</td>
-            <td>Concluído</td>
-            <td><i><u>Detalhes do pedido</u></i></td>
-        </tr>
+        <div id="input_filtro_data">
+            <br>
+            <p>Filtrar por data: </p>
+            <input type="text" id="input_data" onkeyup="funcao_pesquisa()" placeholder="Digite a data...">
+            <br><br>
+        </div c>
+
+        <table id="pedidos">
+            <tr>
+                <th>Data</th>
+                <th>Hora</th>
+                <th>Pedido</th>
+                <th>Valor</th>
+                <th>Forma de pagamento</th>
+                <th>Vendedor</th>
+            </tr>
+            <tr>
+
+                <td>20/07/1994</td>
+                <td>09:35</td>
+                <td>001</td>
+                <td>R$ 48,00</td>
+                <td>Cartão</td>
+                <td>Jeff Bezos</td>
+            </tr>
+            <tr>
+                <td>21/07/1994</td>
+                <td>12:32</td>
+                <td>002</td>
+                <td>R$ 33,00</td>
+                <td>Dinheiro</td>
+                <td>Roberto Faria</td>
+            </tr>
+            <tr>
+                <td>22/07/1994</td>
+                <td>09:35</td>
+                <td>003</td>
+                <td>R$ 35,00</td>
+                <td>Cartão</td>
+                <td>Jeff Bezos</td>
+            </tr>
+            <tr>
+                <td>23/07/1994</td>
+                <td>14:23</td>
+                <td>004</td>
+                <td>R$ 40,00</td>
+                <td>Cartão</td>
+                <td>Roberto Faria</td>
+            </tr>
+            <tr>
+                <td>24/07/1994</td>
+                <td>09:35</td>
+                <td>005</td>
+                <td>R$ 48,00</td>
+                <td>Dinheiro</td>
+                <td>Jeff Bezos</td>
+            </tr>
+            <tr>
+                <td>24/07/1994</td>
+                <td>18:28</td>
+                <td>006</td>
+                <td>R$ 150,00</td>
+                <td>Cartão</td>
+                <td>Roberto Faria</td>
+            </tr>
+            <tr>
+                <td>25/07/1994</td>
+                <td>09:35</td>
+                <td>007</td>
+                <td>R$ 390,00</td>
+                <td>Cartão</td>
+                <td>Jeff Bezos</td>
+            </tr>
+            <tr>
+                <td>25/07/1994</td>
+                <td>22:01</td>
+                <td>008</td>
+                <td>R$ 56,00</td>
+                <td>Cartão</td>
+                <td>Jeff Bezos</td>
+            </tr>
+            <tr>
+                <td>26/07/1994</td>
+                <td>00:48</td>
+                <td>009</td>
+                <td>R$ 23,00</td>
+                <td>Dinheiro</td>
+                <td>Jeff Bezos</td>
+            </tr>
 
 
-    </table>
+        </table>
 
-    <br>
-    <br>
+    </article>
+    <footer>
+        <p>Copyright © 1994 de Jeff Bezos. Todos os direitos reservados</p>
+    </footer>
+</body>
 
-
-    <a href="index.html">Página inicial</a>
-    </div>
-</body </html>
+</html>
