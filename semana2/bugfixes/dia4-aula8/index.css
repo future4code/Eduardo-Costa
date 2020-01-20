@@ -64,6 +64,13 @@ div>p:first-child {
 }
 
 
+/* Ja veio corrigido la em baixo, mais eu faria assim
+.icone {
+    opacity: 50%;
+}
+*/
+
+
 /** 
   *
   *  ESTILOS HOME 
