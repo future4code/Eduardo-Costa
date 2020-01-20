@@ -51,6 +51,7 @@ div>p:first-child {
 
 .botao-amarelo:hover {
     background-color: #c44f00;
+    color: white;
 }
 
 .container {
@@ -118,6 +119,7 @@ td button {
 
 td button:hover {
     background-color: #c4ad31;
+    color: white;
 }
 
 .container-do-search {
@@ -144,5 +146,6 @@ td button:hover {
 }
 
 #back-button:hover {
-    background-color: #635a3d
+    background-color: #635a3d;
+    color: white;
 }
