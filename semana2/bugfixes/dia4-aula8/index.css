@@ -150,4 +150,6 @@ td button:hover {
     color: white;
 }
 
-ol {}
+button:focus {
+    outline: none;
+}
