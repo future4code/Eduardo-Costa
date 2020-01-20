@@ -34,6 +34,11 @@ div>p:first-child {
     display: inline;
 }
 
+#container-de-descricao>p:first-child {
+    display: inline-block;
+    max-width: 210px;
+}
+
 div img {
     background: black;
 }
