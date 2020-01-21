@@ -1,0 +1,169 @@
+            /* CORES */
+            /* azul/verde #99d3df */
+            /* azul claro #88bbd6 */
+            /* cinza #cdcdcd */
+            /* cinza/branco #e9e9e9 */
+            /* azul #2099d2 */
+            
+            * {
+                font-family: 'Oxygen', sans-serif;
+                text-shadow: 1px 1px gray;
+                word-spacing: 0.1em;
+                letter-spacing: 0.1em;
+                transition: linear;
+            }
+            
+            nav>a {
+                text-decoration: none;
+                color: whitesmoke;
+                padding: 20px;
+                transition-duration: 2000ms;
+                border-radius: 5px;
+            }
+            
+            nav>a:hover {
+                text-decoration: none;
+                color: white;
+                background-color: #88bbd6;
+                padding: 20px;
+                transition: ease-in;
+                transition-duration: 500ms;
+            }
+            
+            nav {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                text-align: center;
+                bottom: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                position: sticky;
+                top: 0;
+            }
+            
+            #cabecalho,
+            body {
+                padding: 0;
+                background-color: #2099d2;
+                color: whitesmoke;
+                text-align: center;
+                margin: 0;
+            }
+            
+            header>h3 {
+                word-spacing: 0.2em;
+                letter-spacing: 0.2em;
+            }
+            
+            header>h1 {
+                text-shadow: 1px 1px black;
+            }
+            
+            .linha_h {
+                border: 1px solid #99d3df;
+                width: 75%;
+                border-radius: 2px;
+            }
+            
+            footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                text-align: right;
+                color: #cdcdcd;
+                background-color: #474747;
+                text-shadow: 0px 0px black;
+            }
+            
+            #sobre {
+                text-shadow: 0px 0px none;
+                text-align: justify;
+                padding: 100px;
+            }
+            
+            #habilidades {
+                text-shadow: 0px 0px none;
+                text-align: center;
+                padding: 100px;
+            }
+            
+            #habilidades>ul,
+            #projetos,
+            #contatos {
+                text-shadow: 0px 0px none;
+                text-align: left;
+                padding: 100px;
+                padding-top: 0;
+            }
+            
+            #Future4 {
+                color: orange;
+            }
+            
+            header {
+                position: sticky;
+                top: 0;
+            }
+            
+            table {
+                border: solid 1px;
+                border-color: darkgrey;
+                border-collapse: collapse;
+                width: 70%;
+                justify-content: center;
+                margin-left: 20px;
+            }
+            
+            th {
+                background-color: #474747;
+                color: #cdcdcd;
+                text-shadow: 0px 0px black;
+            }
+            
+            img {
+                max-width: 70%;
+                max-height: 70%;
+                width: auto;
+                height: auto;
+                opacity: 60%;
+                border-radius: 10px;
+            }
+            
+            img:hover {
+                width: auto;
+                height: auto;
+                opacity: 100%;
+                border-radius: 10px;
+            }
+            
+            a {
+                text-decoration: none;
+                color: whitesmoke;
+                padding: 20px;
+            }
+            
+            input {
+                border-radius: 5px;
+                width: 50%;
+                padding: 5px;
+            }
+            
+            h3 {
+                color: navy;
+            }
+            
+            h4 {
+                color: darkolivegreen;
+                font-style: italic;
+            }
+            
+            b {
+                color: navy;
+            }
+            
+            #formacao {
+                width: 100%;
+                height: 100%;
+            }
