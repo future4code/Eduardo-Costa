@@ -1,0 +1,113 @@
+level1 {
+    grid-column-start: 3;
+}
+
+level2 {
+    grid-column-start: 5;
+}
+
+level3 {
+    grid-column-end: 4;
+}
+
+level4 {
+    grid-column-end: 2;
+}
+
+level5 {
+    grid-column-end: -2;
+}
+
+level6 {
+    grid-column-start: -3;
+}
+
+level7 {
+    grid-column-end: span 2;
+}
+
+level8 {
+    grid-column-end: span 5;
+}
+
+level9 {
+    grid-column-start: span 3;
+}
+
+level10 {
+    grid-column: 4 / 6;
+}
+
+level11 {
+    grid-column: 2 / 5;
+}
+
+level12 {
+    grid-row-start: 3;
+}
+
+level13 {
+    grid-row: 3 / 6;
+}
+
+level14 {
+    grid-row-start: 5;
+    grid-column-start: 2;
+}
+
+level15 {
+    grid-row: 1 / 6;
+    grid-column: 2 / 6;
+}
+
+level16 {
+    grid-area: 1/2/4/6;
+}
+
+level17 {
+    grid-area: 2/3/5/6;
+}
+
+level18 {
+    order: 1;
+}
+
+level19 {
+    order: -1;
+}
+
+level20 {
+    grid-template-columns: 50%;
+}
+
+level21 {
+    grid-template-columns: repeat(8, 12.5%);
+}
+
+level22 {
+    grid-template-columns: 100px 3em 40%;
+}
+
+level23 {
+    grid-template-columns: 1fr 5fr;
+}
+
+level24 {
+    grid-template-columns: 50px 1fr 1fr 1fr 50px;
+}
+
+level25 {
+    grid-template-columns: 75px 3fr 2fr;
+}
+
+level26 {
+    /*não consegui entender o enunciado*/
+}
+
+level27 {
+    grid-template: 60% 40% / 200px;
+}
+
+level28 {
+    grid-template: 1fr 50px/ 20% 80%
+}
