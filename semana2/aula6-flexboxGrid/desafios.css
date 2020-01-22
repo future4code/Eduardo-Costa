@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0px solid black;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 900px;
+    display: grid;
+    grid-template-rows: 5% 95%;
+}
+
+.topo {
+    background-color: #fdfaf3;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    align-items: center;
+}
+
+.topo-inicio {
+    padding-left: 20%;
+}
+
+.topo-meio {
+    display: grid;
+    justify-content: stretch;
+    padding-right: 20%;
+}
+
+.conteudo {
+    background-color: #f9f9f9;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.conteudo-esquerda {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+.conteudo-direita {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.conteudo-centro-topo-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+
+.conteudo-centro-artigo-interacoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.conteudo-centro-artigo-interacoes-dir {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.conteudo-centro-artigo-interacoes-esq {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.conteudo-centro-artigo-autor {
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+.icone {
+    max-width: 25px;
+    max-height: 25px;
+    width: auto;
+    height: auto;
+}
+
+.avatar {
+    max-width: 40px;
+    max-height: 40px;
+    width: auto;
+    height: auto;
+}
+
+.interacao {
+    max-width: 20px;
+    max-height: 20px;
+    width: auto;
+    height: auto;
+}
+
+.designexp,
+.conteudo-centro-artigo {
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0px #c2c2c2;
+}
+
+.conteudo-centro-artigo {
+    padding: 5px;
+}
+
+.join-dev {
+    border: 1px solid #0b46e2;
+    border-radius: 3px;
+    box-shadow: 3px 3px 0px #0636b2;
+}
+
+.bt-dev {
+    border: 1px solid black;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    padding: 3px;
+}
+
+.bt-write {
+    border: 2px solid black;
+    border-radius: 3px;
+    color: black;
+    font-weight: bold;
+    background-color: #65e2d4;
+    padding: 3px 10px;
+}
+
+.bt-save {
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    background-color: #1541fa;
+    padding: 3px;
+    margin-left: 4px;
+}
+
+.bt-feed {
+    border: 1px solid #1541fa;
+    border-radius: 2px;
+    color: black;
+    font-weight: bold;
+    font-size: 10px;
+    background-color: #d4ddfc;
+    padding: 3px;
+    margin-left: 4px;
+    box-shadow: 3px 3px 0px #1541fa;
+}
+
+.busca {
+    background-color: #e7e7e7;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.autor {
+    font-weight: bold;
+    color: rgb(61, 61, 61);
+}
+
+.bt-twt,
+.bt-git {
+    border: 1px solid #1541fa;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 10px;
+    background-color: #dee3ff;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+}
+
+.join-dev-titulo {
+    background-color: blue;
+    color: white;
+    padding: 15px;
+    display: grid;
+    justify-content: center;
+}
+
+.join-dev-corpo {
+    display: grid;
+    padding: 15px;
+}
+
+.designexp-inicio {
+    text-decoration: underline;
+    margin-bottom: 10px;
+    color: gray;
+    padding: 5px;
+}
+
+.designexp-meio {
+    padding: 5px;
+}
+
+.designexp-fim {
+    margin-top: 10px;
+    background-color: lightgray;
+    padding: 5px;
+}
+
+.conteudo-centro-artigo-autor {
+    margin: 10px;
+}
+
+.menor {
+    font-size: 10px;
+    margin-left: 5px;
+}
