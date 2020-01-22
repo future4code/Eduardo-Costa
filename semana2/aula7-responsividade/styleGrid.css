@@ -1,0 +1,131 @@
+* {
+    border: 0px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+.container-principal {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.cont-princ-conteudo {
+    display: grid;
+    grid-template-rows: 10% 15% 30% 15%;
+}
+
+.cont-princ-lateral {
+    border: 1pt solid gray;
+    padding-left: 20px;
+}
+
+.cont-conteudo-1 {
+    background-color: red;
+}
+
+.cont-conteudo-2 {
+    display: grid;
+    grid-template: 50% 50% / 1fr 1fr 1fr;
+}
+
+.cont-conteudo-3 {
+    display: grid;
+    grid-template: 100% / 1fr 1fr;
+}
+
+.cont-conteudo-4 {
+    display: grid;
+    grid-template: 100% / 1fr 1fr 1fr;
+}
+
+.item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border: 1pt solid black;
+}
+
+.fazul {
+    background-color: blue;
+}
+
+.famarelo {
+    background-color: yellow;
+}
+
+.fpreto {
+    background-color: black;
+    color: white;
+}
+
+.fbranco {
+    background-color: white;
+}
+
+.fverde {
+    background-color: green;
+}
+
+@media screen and (max-width: 900px) {
+    .cont-conteudo-2 {
+        display: grid;
+        grid-template: 25% 25% 25% 25% / 1fr 1fr;
+    }
+    .cont-princ-conteudo {
+        display: grid;
+        grid-template-rows: 8% 30% 30% 30%;
+    }
+    .cont-conteudo-4 {
+        display: grid;
+        grid-template: 25% 25% 25% 25% / 1fr 1fr;
+    }
+    .span2 {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    * {
+        color: yellow;
+    }
+    .cont-princ-lateral {
+        display: none;
+    }
+    .container-principal {
+        grid-template-columns: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        color: red;
+    }
+    .cont-princ-conteudo {
+        display: grid;
+        grid-template: 1fr 6fr 2fr 3fr / 1fr;
+    }
+    .span2 {
+        grid-column: span 1;
+    }
+    .cont-conteudo-2 {
+        display: grid;
+        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr;
+    }
+    .cont-conteudo-3 {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr;
+    }
+    .cont-conteudo-4 {
+        display: grid;
+        grid-template: 1fr 1fr 1fr / 1fr;
+    }
+    .width-900 {
+        display: none;
+    }
+    .width-700 {
+        display: none;
+    }
+}
