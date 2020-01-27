@@ -1,0 +1,71 @@
+* {
+    border: 0px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+.fazul {
+    background-color: blue;
+}
+
+.famarelo {
+    background-color: yellow;
+}
+
+.fpreto {
+    background-color: black;
+    color: white;
+}
+
+.fbranco {
+    background-color: white;
+}
+
+.fverde {
+    background-color: green;
+}
+
+.container-principal {
+    display: flex;
+    flex-direction: row;
+}
+
+.cont-princ-lateral {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+}
+
+.cont-princ-conteudo {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
+
+.cont-conteudo-1 {
+    height: 8vh;
+    display: flex;
+    background-color: red;
+}
+
+.cont-conteudo-2 {
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cont-conteudo-3 {
+    height: 30vh;
+}
+
+.cont-conteudo-4 {
+    height: 15vh;
+}
+
+.item {
+    height: 10vw;
+    width: 15vw;
+    border: 1px solid black;
+}
