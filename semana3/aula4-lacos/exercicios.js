@@ -65,3 +65,21 @@ console.log("c.")
 console.log("Novo array somente com os valores PARES do array original:")
 console.log(arrayPares)
 console.log(" ")
+
+
+// ***** DESAFIOS *****
+// DESAFIO 1
+console.log('DESAFIO 1')
+console.log(" ")
+
+console.log('O resultado de digitar 4 no prompt seria esse:')
+console.log('0')
+console.log('00')
+console.log('000')
+console.log('0000')
+console.log('Ou seja, ele concatena a string "0" e mostra o resultado até que o total de linhas chegue a 4, quando encerra o programa')
+
+// DESAFIO 2
+console.log(" ")
+console.log('DESAFIO 2')
+console.log(" ")
