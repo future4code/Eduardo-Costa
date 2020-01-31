@@ -62,18 +62,23 @@ while (confirm("Deseja iniciar uma nova rodada?")) {
         console.log(" ")
         console.log('Voce tem ', pontosUser, " pontos com as cartas ", cartasUser)
         console.log('A primeira carta do computador é ', cartasComp[0], "(", valoresComp[0], " pontos)")
+        alert('Voce tem ' + pontosUser + " pontos com as cartas " + cartasUser + ". A primeira carta do adversario é " + cartasComp[0] + " (" + valoresComp[0] + " pontos)")
+
         while ((pontosUser <= 21 && confirm("Quer comprar mais uma carta?"))) {
             console.log(" ")
             console.log('O computador ja tem ', cartasComp.length, " cartas. As que você pode ver são: ", cartasComp.slice(0, (cartasUser.length - 1)));
+            alert('O computador ja tem ' + cartasComp.length + " cartas. As que você pode ver são: " + cartasComp.slice(0, (cartasUser.length - 1)));
             if (true === true) {
                 let carta = comprarCarta();
                 cartasUser.push(carta.texto);
                 pontosUser = pontosUser + carta.valor;
             }
             console.log('Voce tem ', pontosUser, " pontos com as cartas ", cartasUser)
+            alert('Voce tem ' + pontosUser + " pontos com as cartas " + cartasUser)
             if (pontosUser > 21) {
                 console.log(" ")
                 console.log("Você comprou cartas demais e passou de 21 pontos!")
+                alert("Você comprou cartas demais e passou de 21 pontos!")
             }
             if (pontosComp < limiteComp) {
                 let carta = comprarCarta();
@@ -95,6 +100,7 @@ while (confirm("Deseja iniciar uma nova rodada?")) {
     console.log("O computador fez ", pontosComp, " pontos com as cartas ", cartasComp)
     console.log("Você fez ", pontosUser, " pontos com as cartas ", cartasUser)
     console.log(" ")
+    alert('Resumo da rodada: Você fez ' + pontosUser + " e o computador fez " + pontosComp)
 
     if ((pontosUser === pontosComp) || ((pontosUser > 21) && (pontosComp > 21))) { //pontos iguais ou estouro dos 2
         empates++;
@@ -122,6 +128,15 @@ while (confirm("Deseja iniciar uma nova rodada?")) {
     console.log("**************")
     console.log("Resumo geral: ")
     console.log("Você ganhou ", ganhou, " partidas até agora.", Math.floor((ganhou / partidas * 100)), "% do total de ", partidas, " disputadas.")
+    alert("Você ganhou " + ganhou + " partidas até agora. " + Math.floor((ganhou / partidas * 100)) + "% do total de " + partidas + " disputadas.")
     console.log("Você perdeu ", perdeu, " partidas até agora.", Math.floor((perdeu / partidas * 100)), "% do total de ", partidas, " disputadas.")
     console.log("Vocês empataram em ", empates, " partidas até agora.", Math.floor((empates / partidas * 100)), "% do total de ", partidas, " disputadas.")
 }
+console.log("Ok, até mais então!")
+alert("Até mais então! Resumo: Você ganhou " + ganhou + " partidas até agora. " + Math.floor((ganhou / partidas * 100)) + "% do total de " + partidas + " disputadas.")
+console.log(" ")
+console.log("**************")
+console.log("Resumo geral: ")
+console.log("Você ganhou ", ganhou, " partidas até agora.", Math.floor((ganhou / partidas * 100)), "% do total de ", partidas, " disputadas.")
+console.log("Você perdeu ", perdeu, " partidas até agora.", Math.floor((perdeu / partidas * 100)), "% do total de ", partidas, " disputadas.")
+console.log("Vocês empataram em ", empates, " partidas até agora.", Math.floor((empates / partidas * 100)), "% do total de ", partidas, " disputadas.")
