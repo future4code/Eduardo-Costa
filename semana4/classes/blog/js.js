@@ -15,4 +15,11 @@ function addPost(titulo, autor, conteudo) {
     let newp = new NovoPost(idPost, titulo, autor, conteudo)
     idUltimoPost++
     posts.push(newp)
+    let titulo2 = document.getElementById('titulo')
+    let autor2 = document.getElementById('autor')
+    let conteudo2 = document.getElementById('conteudo')
+    titulo2.value = ""
+    autor2.value = ""
+    conteudo2.value = ""
+    console.log(posts)
 }
