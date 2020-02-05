@@ -122,3 +122,13 @@
     text-decoration: line-through;
     font-style: italic;
 }
+
+.some {
+    display: none;
+}
+
+.dicas {
+    font-style: italic;
+    padding-top: 10px;
+    font-size: smaller;
+}

@@ -1,3 +1,5 @@
+let ultimoIdUsado = 0
+
 function geraTarefa() {
     const input = document.getElementById("novat")
     const novoItem = input.value
@@ -24,8 +26,11 @@ function geraTarefa() {
             dia = document.getElementById("domingo")
         }
     }
-    dia.innerHTML += "<p>" + novoItem + "</p>"
+    let usarId = ultimoIdUsado + 1
+    dia.innerHTML += "<p id='t" + usarId + "' ondblclick='apagar()' onclick='riscar()'> " + "ID: " + usarId + " - " + novoItem + "</p>"
     input.value = ""
+    ultimoIdUsado = usarId
+
 }
 
 function limpaTarefas() {
@@ -44,4 +49,12 @@ function limpaTarefas() {
     dia = document.getElementById("sabado")
     dia.innerHTML = ""
 
+}
+
+function riscar() {
+    event.srcElement.classList.add("risca");
+}
+
+function apagar() {
+    event.srcElement.classList.add("some");
 }
