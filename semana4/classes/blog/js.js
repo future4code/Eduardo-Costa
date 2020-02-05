@@ -28,4 +28,5 @@ function addPost(titulo, autor, conteudo) {
 function inserePosts(id, titulo, autor, conteudo) {
     let parteDePosts = document.getElementById('mostraposts')
     parteDePosts.innerHTML += "<div class='posts' id='" + id + "'><div class='titulos' id='t" + id + "'><h3>" + titulo + "</h3></div><div class='conteudos' id='c" + id + "'><p>" + conteudo + "</p></div><div class='autor' id='a" + id + "'><p>" + autor + "</p></div></div>"
+    parteDePosts.innerHTML += "<hr>------------</hr>"
 }
