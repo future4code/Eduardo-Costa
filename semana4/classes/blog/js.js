@@ -1,0 +1,18 @@
+class NovoPost {
+    constructor(idPost, titulo, autor, conteudo) {
+        this.idPost = idPost
+        this.titulo = titulo
+        this.autor = autor
+        this.conteudo = conteudo
+    }
+}
+
+let posts = []
+let idUltimoPost = 0
+
+function addPost(titulo, autor, conteudo) {
+    idPost = idUltimoPost + 1
+    let newp = new NovoPost(idPost, titulo, autor, conteudo)
+    idUltimoPost++
+    posts.push(newp)
+}
