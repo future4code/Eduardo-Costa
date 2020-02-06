@@ -16,6 +16,10 @@ class Despesa {
 let despesas = []
 
 function cadastraDespesa(valor, descricao, tipo) {
-    let nDesp = new Despesa(valor, descricao, tipo)
-    despesas.push(nDesp)
+    if ((valor != "") && (descricao != "") && (tipo != "")) {
+        let nDesp = new Despesa(valor, descricao, tipo)
+        despesas.push(nDesp)
+    } else {
+        alert('Verifique se todos os campos estão preenchidos')
+    }
 }
