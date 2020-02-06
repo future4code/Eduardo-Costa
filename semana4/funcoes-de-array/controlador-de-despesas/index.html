@@ -26,10 +26,10 @@
         <input type="button" onclick="cadastraDespesa(valor.value, descricao.value, tipo.value)" value="Adicionar">
     </div>
     <div class="filtradespesas" id="filtradespesas">
-        <input type="number" name="valorMin" id="valorMin">
-        <input type="number" name="valorMax" id="valorMax">
+        <input type="number" name="valorMin" id="valorMin" value="0" required>
+        <input type="number" name="valorMax" id="valorMax" value="9999999">
         <input type="text" name="tipoF" id="tipoF" list="tipos"><br><br>
-        <input type="button" onclick="" value="Filtrar">
+        <input type="button" onclick="filtraDespesa(tipoF.value,valorMax.value,valorMin.value,despesas)" value="Filtrar">
     </div>
     <div class="mostradespesas" id="mostradespesas">
         sssss

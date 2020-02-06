@@ -29,6 +29,7 @@ function cadastraDespesa(valor, descricao, tipo) {
         let nDesp = new Despesa(valor, descricao, tipo)
         despesas.push(nDesp)
         limpaCadastro()
+        geraExtrato(despesas)
     } else {
         alert('Verifique se todos os campos estão preenchidos')
     }
@@ -37,10 +38,19 @@ function cadastraDespesa(valor, descricao, tipo) {
 function geraExtrato(array) {
     extrato = document.getElementById("mostradespesas")
     extrato.innerHTML = ''
-    for (let i = 0; i <= array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         let tipo2 = array[i].tipo
         let valor2 = array[i].valor
         let descricao2 = array[i].descricao
         extrato.innerHTML += '<div class="despesa"><p>' + tipo2 + " - " + valor2 + " - " + descricao2 + '</p></div>'
     }
+}
+
+function filtraDespesa(tipo, vMax, vMin, arrayDespesas) {
+    const despesasFiltradas = arrayDespesas.filter(
+        (item, index, array) => {
+            return (item.tipo == tipo) && (item.valor <= vMax) && (item.valor >= vMin)
+        }
+    )
+    geraExtrato(despesasFiltradas)
 }
