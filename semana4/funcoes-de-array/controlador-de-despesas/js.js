@@ -6,6 +6,15 @@ function limpaCadastro() {
     campo = document.getElementById("tipo")
     campo.value = ""
 }
+
+function limpaFiltro() {
+    let campo = document.getElementById("valorMax")
+    campo.value = ""
+    campo = document.getElementById("valorMin")
+    campo.value = ""
+    campo = document.getElementById("tipoF")
+    campo.value = ""
+}
 class Despesa {
     constructor(valor, descricao, tipo) {
         this.valor = valor
@@ -19,6 +28,7 @@ function cadastraDespesa(valor, descricao, tipo) {
     if ((valor != "") && (descricao != "") && (tipo != "")) {
         let nDesp = new Despesa(valor, descricao, tipo)
         despesas.push(nDesp)
+        limpaCadastro()
     } else {
         alert('Verifique se todos os campos estão preenchidos')
     }
