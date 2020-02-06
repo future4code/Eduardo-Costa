@@ -48,13 +48,17 @@ function geraExtrato(array) {
 }
 
 function filtraDespesa(tipo, vMax, vMin, arrayDespesas) {
-    const despesasFiltradas = arrayDespesas.filter(
-        (item, index, array) => {
-            return (item.tipo == tipo) && (item.valor <= vMax) && (item.valor >= vMin)
-        }
-    )
-    geraExtrato(despesasFiltradas)
-    somaArray(despesasFiltradas)
+    if ((vMax != "") && (vMin != "") && (tipo != "")) {
+        const despesasFiltradas = arrayDespesas.filter(
+            (item, index, array) => {
+                return (item.tipo == tipo) && (item.valor <= vMax) && (item.valor >= vMin)
+            }
+        )
+        geraExtrato(despesasFiltradas)
+        somaArray(despesasFiltradas)
+    } else {
+        alert('Todos os campos de filtro devem estar preenchidos')
+    }
 }
 
 function somaArray(array) {
