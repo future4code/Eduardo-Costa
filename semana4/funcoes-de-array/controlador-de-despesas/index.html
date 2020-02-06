@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,22 @@
     <script src="js.js"></script>
     <title>DuBank</title>
 </head>
+
 <body>
-    
+    <div class="cadastro">
+        <input type="number" name="valor" id="valor">
+        <input type="text" name="descricao" id="descricao">
+        <input type="text" name="tipo" id="tipo" list="tipos"><br><br>
+        <datalist id="tipos">
+            <option value="Despesas de Casa">
+            <option value="Despesas de Festas">
+            <option value="Despesas de Viagem">
+            <option value="Despesas com Alimentação">
+            <option value="Despesas com transporte">
+            <option value="Outros">
+        </datalist>
+        <input type="button" value="Adicionar">
+    </div>
 </body>
+
 </html>
