@@ -30,6 +30,7 @@ function cadastraDespesa(valor, descricao, tipo) {
         despesas.push(nDesp)
         limpaCadastro()
         geraExtrato(despesas)
+        somaArray(despesas)
     } else {
         alert('Verifique se todos os campos estão preenchidos')
     }
@@ -53,4 +54,15 @@ function filtraDespesa(tipo, vMax, vMin, arrayDespesas) {
         }
     )
     geraExtrato(despesasFiltradas)
+    somaArray(despesasFiltradas)
+}
+
+function somaArray(array) {
+    let total = 0
+    for (let i = 0; i < array.length; i++) {
+        let novoValor = Number(array[i].valor)
+        total += novoValor
+    }
+    soma = document.getElementById("mostrasoma")
+    soma.innerHTML = '<h5 id="mostrasoma">Valor total: ' + total + '</h5>'
 }
