@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.corpo {
+    display: grid;
+    grid-template-columns: 1fr repeat(7, 3fr);
+    grid-template-rows: repeat(30, 1fr);
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    color: whitesmoke;
+    height: 100vh;
+    width: 100vw;
+}
+
+.domingo {
+    grid-area: 7 / 2 / 31 / 3;
+    background-color: rgba(244, 91, 105, 1);
+}
+
+.segunda {
+    grid-area: 7 / 3 / 31 / 4;
+    background-color: rgba(38, 70, 83, .7);
+}
+
+.terca {
+    grid-area: 7 / 4 / 31 / 5;
+    background-color: rgba(42, 157, 143, 1);
+}
+
+.quarta {
+    grid-area: 7 / 5 / 31 / 6;
+    background-color: rgba(233, 196, 106, 1);
+}
+
+.quinta {
+    grid-area: 7 / 6 / 31 / 7;
+    background-color: rgba(244, 162, 97, 1);
+}
+
+.sexta {
+    grid-area: 7 / 7 / 31 / 8;
+    background-color: rgba(231, 111, 81, 1);
+}
+
+.sabado {
+    grid-area: 7 / 8 / 31 / 9;
+    background-color: rgba(2, 128, 144, 1);
+}
+
+.cabecalho {
+    grid-area: 1 / 1 / 7 / 9;
+    background-color: rgba(17, 75, 95, 1);
+}
+
+.horas {
+    grid-area: 7 / 1 / 31 / 2;
+    background-color: rgba(69, 105, 144, 1);
+}
+
+.interacao {
+    grid-area: 1 / 4 / 6 / 9;
+}
+
+.titulos {
+    grid-area: 6 / 2 / 7 / 9;
+}
+
+.dom {
+    grid-area: 6 / 2 / 7 / 3;
+}
+
+.seg {
+    grid-area: 6 / 3 / 7 / 4;
+}
+
+.ter {
+    grid-area: 6 / 4 / 7 / 5;
+}
+
+.qua {
+    grid-area: 6 / 5 / 7 / 6;
+}
+
+.qui {
+    grid-area: 6 / 6 / 7 / 7;
+}
+
+.sex {
+    grid-area: 6 / 7 / 7 / 8;
+}
+
+.sab {
+    grid-area: 6 / 8 / 7 / 9;
+    justify-items: center;
+}
+
+.interacao {
+    padding-top: 10px;
+}
+
+.btn {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: lightseagreen;
+    color: whitesmoke;
+}
+
+.domingo,
+.segunda,
+.terca,
+.quarta,
+.quinta,
+.sexta,
+.sabado {
+    padding: 5px;
+}
+
+.risca {
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.some {
+    display: none;
+}
+
+.dicas {
+    font-style: italic;
+    padding-top: 10px;
+    font-size: smaller;
+}
