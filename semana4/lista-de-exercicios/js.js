@@ -26,6 +26,14 @@ const consultas = [
     { nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
     { nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
 ]
+const contas = [
+    { cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+    { cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+    { cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+    { cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+    { cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+    { cliente: "Soter", saldoTotal: 1200, compras: [] }
+]
 
 function preencheResposta(pergunta, resposta, codigo, img) {
     let html = document.getElementById('conteudo')
@@ -477,6 +485,11 @@ function fa3b() {
 }
 
 function geraEmail(nome, genero, cancelada, data) {
+    let pergunta = "Funções de array - Ex4 -  Gerar e enviar e-mail"
+    let img = "sem"
+    let codigo = ""
+
+
     let tratamento1
     let tratamento2
     if (genero == "masculino") {
@@ -488,19 +501,35 @@ function geraEmail(nome, genero, cancelada, data) {
         tratamento2 = "lembrá-la "
     }
     if (cancelada == false) {
-        console.log(`Olá, ${tratamento1} ${nome}. Estamos enviando esta mensagem para
+        resposta = `Olá, ${tratamento1} ${nome}. Estamos enviando esta mensagem para
     ${tratamento2} da sua consulta no dia ${data}. Por favor, acuse
-    o recebimento deste e-mail.`)
+    o recebimento deste e-mail.`
+        preencheResposta(pergunta, resposta, codigo, img)
     }
     if (cancelada == true) {
-        console.log(`Olá, ${tratamento1} ${nome}. Infelizmente, sua consulta marcada
+        resposta = `Olá, ${tratamento1} ${nome}. Infelizmente, sua consulta marcada
         para o dia ${data} foi cancelada. Se quiser, pode entrar em 
-        contato conosco para remarcá-la`)
+        contato conosco para remarcá-la`
+        preencheResposta(pergunta, resposta, codigo, img)
     }
 }
 
 function fa4() {
     for (i = 0; i < consultas.length; i++) {
-        geraEmail(consultas.nome, consultas.genero, consultas.cancelada, consultas.data)
+        geraEmail(consultas[i].nome, consultas[i].genero, consultas[i].cancelada, consultas[i].dataDaConsulta)
     }
+}
+
+function fa5() {
+    const consolidarContas = (arr) => {
+        for (let i = 0; i < arr.length; i++) {
+            arr[i].saldoTotal -= arr[i].compras.reduce((a, b) => a + b, 0);
+        }
+        let pergunta = "Funções de array - Ex5 -   funcionalidade de um banco digital"
+        let resposta = "aaa" + arr
+        let img = "sem"
+        let codigo = ""
+        preencheResposta(pergunta, resposta, codigo, img)
+    };
+    consolidarContas(contas)
 }
