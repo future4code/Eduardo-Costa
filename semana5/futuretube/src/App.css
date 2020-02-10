@@ -1,0 +1,249 @@
+* {
+  border: 0px solid black;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 15vh 80vh 5vh;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  color: whitesmoke;
+  text-shadow: 1px 1px black;
+  padding: 1%;
+}
+
+.cabecalho-conteiner {
+  border-bottom: 1pt solid lightgray;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.autor {
+  font-style: italic;
+  font-size: 1vw;
+}
+
+.busca {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.5);
+  ;
+}
+
+.itens {
+  display: grid;
+  grid-template: repeat(4, auto) / repeat(4, auto);
+  gap: 3%;
+  padding: 3%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5px;
+  opacity: none;
+}
+
+img:hover {
+  max-width: 100%;
+  opacity: 50%;
+}
+
+.itens-main {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 100px rgba(255, 255, 255, .3);
+  border: 1pt solid rgba(255, 255, 255, .2);
+}
+
+.itens-main-titulo {
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.itens-main-titulo:hover {
+  color: orange;
+}
+
+.itens-main-conteudo {
+  padding: 2%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+body {
+  background: linear-gradient(steelblue, steelblue, steelblue, transparent);
+  background-blend-mode: screen;
+}
+
+.play {
+  display: grid;
+}
+
+video {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.play-main {
+  display: grid;
+  padding-right: 3%;
+}
+
+.play-outros {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+.botoes-outros {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.play-titulo {
+  display: grid;
+  justify-content: left;
+  color: whitesmoke;
+  background-color: black;
+  padding: 1%;
+  border-radius: 5px;
+}
+
+.btn-inter {
+  border-radius: 5px;
+  margin-left: 1vh;
+  width: 25vw;
+}
+
+input {
+  border-radius: 5px;
+  height: 3vh;
+  width: 20vw;
+  font-style: italic;
+  padding-left: 2%;
+}
+
+.sugest {
+  color: white;
+  display: grid;
+  justify-content: right;
+}
+
+.conteiner {
+  display: grid;
+  grid-template-columns: 15vw 85vw;
+}
+
+.conteiner-play {
+  display: grid;
+  grid-template-columns: 15vw 70vw 15vw;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.menu>ul {
+  list-style: none;
+}
+
+.menu>ul>a>li {
+  padding: 1vw;
+}
+
+@media screen and (max-width: 900px) {
+  input {
+      width: 50vw;
+      height: 5vh;
+  }
+  .autor {
+      font-style: italic;
+      font-size: 3vw;
+  }
+  .itens {
+      display: grid;
+      grid-template: repeat(2, auto) / repeat(2, auto);
+      gap: 1%;
+      padding: 3%;
+      margin: 0 auto;
+  }
+  footer {
+      display: none;
+  }
+  @media screen and (max-width: 375px) {
+      .itens {
+          display: grid;
+          grid-template: repeat(1, auto) / repeat(1, auto);
+          gap: 0;
+      }
+      .conteiner,
+      .conteiner-play {
+          display: flex;
+          flex-direction: column;
+      }
+      .menu,
+      .menu>ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+      }
+      .menu>ul>a>li {
+          /* border: 1pt solid lightgrey; */
+          border-radius: 1%;
+          margin: 1pt;
+          padding: 2pt;
+      }
+      .play-outros {
+          display: grid;
+          grid-template-columns: auto;
+      }
+      .botoes-outros {
+          display: grid;
+          grid-template-columns: 50% 50%;
+      }
+      .btn-inter {
+          width: 100%;
+          height: 5vh;
+          margin: 0;
+      }
+      .sugest {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin-top: 10%;
+          border-top: 1pt solid lightgray;
+      }
+      .sugest>p {
+          margin: 0 auto;
+          align-items: center;
+      }
+      .play-conteudo {
+          margin-top: 5%;
+      }
+  }
+}
