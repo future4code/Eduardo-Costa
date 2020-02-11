@@ -1,0 +1,22 @@
+.imgbtn {
+    border: 1pt solid black;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    border-radius: 30px;
+    width: 60%;
+    margin: auto;
+    margin-top: 5px;
+    align-items: center;
+    background-color: white;
+    
+}
+.imgbtn-img img {
+    max-width: 80%;
+    padding-left: 10px;
+}
+.imgbtn-text p {
+    padding-left: 10px;
+}
+a {
+    text-decoration: none;
+}

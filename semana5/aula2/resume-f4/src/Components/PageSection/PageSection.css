@@ -1,0 +1,17 @@
+* {
+    padding: 3px;
+    margin: 0;
+    
+}
+
+.pagesection {
+    margin-top: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 1pt 1pt 10pt rgb(0, 0, 0, .5);
+    
+}
+.pagesection > h4{
+    text-align: center;
+}
