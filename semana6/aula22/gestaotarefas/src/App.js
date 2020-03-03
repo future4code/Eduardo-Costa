@@ -44,6 +44,7 @@ class App extends React.Component {
       }
   }
 
+  
   componentDidMount() {
     const dadosArmazenadosString = localStorage.getItem("stateDeTarefas");
     const novoEstado = JSON.parse(dadosArmazenadosString);
