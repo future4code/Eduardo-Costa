@@ -1,9 +1,33 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import styled from 'styled-components'
 
+//PARAMETROS AXIOS
 const baseUrl = "https://us-central1-future4-users.cloudfunctions.net/api";
 const tokenAutenticacao = 'EduardoCosta'
 
+//INICIO CSS
+const DivCadastro = styled.div`
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    input, button {
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 2px;
+        border: 1pt solid #7C7C7C;
+    }
+}
+`
+const DivErro = styled.div`
+background-color: red;
+`
+const DivSucesso = styled.div`
+background-color: green;
+`
+//FIM CSS
 
 class Cadastra extends Component {
     constructor(){
@@ -33,16 +57,17 @@ class Cadastra extends Component {
                 inputNome: "",
                 inputEmail: "",
                 mostraInformacao: true,
-                tipoInfo: "sucesso",
+                tipoInfo: "DivSucesso",
                 infoMsg: "Usuário cadastrado com sucesso!"
             })
         }).catch(error => {
-            console.log(error.response)
             this.setState({
                 tipoInfo: "erro",
-                infoMsg: `Erro ${error.response.status} - ${error.response.data.message}`,
+                infoMsg: `DivErro ${error.response.status} - ${error.response.data.message}`,
                 mostraInformacao: true,
             })
+            console.log(error.response)
+            console.log(this.state.tipoInfo)
         })
     }
     // FIM API
@@ -78,10 +103,10 @@ class Cadastra extends Component {
 
         //FIM RENDERIZACOES
         return (
-            <div>
+            <DivCadastro>
                 {this.state.mostraForm ? formCadastro : ""}
                 {this.state.mostraInformacao ? informaUsuario : ""}
-            </div>
+            </DivCadastro>
         );
     }
 }
