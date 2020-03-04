@@ -98,7 +98,6 @@ h4 {
     cursor: pointer;
 }
 `
-
 //FIM CSS
 
 class Lista extends Component {
