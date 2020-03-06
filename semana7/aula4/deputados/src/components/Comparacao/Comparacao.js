@@ -55,7 +55,9 @@ class Comparacao extends Component {
             catSelecUser: "",
             valorSelecUser: "",
             mostraComparacao: false,
-            indexCat: ""
+            indexCat: "",
+            ganhadorUser: "",
+            ganhadorBot: ""
         }
         }
     
@@ -109,12 +111,26 @@ class Comparacao extends Component {
     
         atualizarSelecaoCatEValor = (event) => {
             const nomeCat = this.props.categoriaSelecionada
-            let gastoCat = this.state.gastosDepSelec[0].gasto.toFixed(2).toString().replace(".",",")
+            let gastoCat = this.state.gastosDepSelec[0].gasto
             this.setState({
                 catSelecUser: nomeCat,
                 valorSelecUser: gastoCat,
                 mostraComparacao: true
             })
+            this.geraVencedor()
+        }
+
+        geraVencedor = () => {
+            const valorUser = this.props.valorSelecionado
+            const valorBot = this.state.valorSelecUser
+            console.log(valorUser)
+            console.log(valorBot)
+            if (valorUser < valorBot ) {
+                this.setState({ganhadorUser: true})
+            } else {
+                this.setState({ganhadorBot: false})
+            }
+
         }
     render() {
         const userGanhou = (
@@ -145,7 +161,8 @@ class Comparacao extends Component {
                     <p>Você selecionou a categoria <strong>{this.props.categoriaSelecionada}</strong></p>
                     <p>Seu deputado gastou R$ <strong>{this.props.valorSelecionado.toFixed(2).toString().replace(".",",")}</strong> nessa categoria</p>
                     <p>O deputado escolhido pelo sistema gastou R$ <strong>{this.state.valorSelecUser}</strong> nessa categoria</p>
-                    {this.state.valorSelecUser > this.props.valorSelecionado ? userGanhou : botGanhou}
+                    {this.state.ganhadorUser ? userGanhou : ""}
+                    {this.state.ganhadorBot ? botGanhou : ""}
                 </div>
             </div>
         )

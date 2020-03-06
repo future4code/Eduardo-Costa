@@ -94,7 +94,7 @@ class Detalhes extends Component {
                 }, 0)
                 arrayParaState.push({categoria: catNome, gasto: valorGeral})
         }
-        this.setState({gastosDepSelec: arrayParaState})
+        this.setState({gastosDepSelec: arrayParaState, mostraLoadingDespesas: false})
     }
 
     atualizarSelecaoCatEValor = (event) => {

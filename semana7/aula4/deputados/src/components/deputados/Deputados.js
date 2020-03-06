@@ -42,8 +42,8 @@ class Deputados extends Component {
         console.log(response.data)
     }
 
-    selecionarDeput = (event) => {
-        let idDoDeput = this.encontrarIdPeloNome(event.target.value)
+    selecionarDeput = () => {
+        let idDoDeput = this.encontrarIdPeloNome(this.state.inputDeputado)
             this.setState({
             mostraDetalhes: true,
             deputSelecionadoUser: idDoDeput,
@@ -68,11 +68,19 @@ class Deputados extends Component {
         })
     }
 
+    gravaDeput = (event) => {
+        console.log(event.target.value)
+            this.setState({
+                inputDeputado: event.target.value,
+        })
+    }
+
     render() {
         const listagem = (
             <div>
                 <label htmlFor="listaDeput">Selecione seu deputado:</label>
-                <input type="text" name="listaDeput" list="deput" onChange={this.selecionarDeput}></input>
+                <input type="text" name="listaDeput" list="deput" onChange={this.gravaDeput}></input>
+                <button onClick={this.selecionarDeput}>Pesquisa</button>
                     <datalist id="deput">
                         {this.state.listaDeputados.map((item, key) =>
                         <option key={key} label={item.id} value={item.nome} />
