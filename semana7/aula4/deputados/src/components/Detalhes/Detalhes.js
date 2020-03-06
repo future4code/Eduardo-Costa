@@ -11,12 +11,27 @@ flex-direction: column;
 text-align: left;
 `
 const DetalhaLat = styled.div`
+border: 1pt solid black;
+margin: 3px;
+border-radius: 3px;
+background-color: rgb(0,0,0, .2);
 display: flex;
 flex-direction: row;
 text-align: left;
 img {
     width: 100px;
+    border-radius: 4px;
 }
+`
+const DivCats = styled.div`
+background-color: rgb(0, 0, 255, 0.1);
+padding: 5px;
+margin: 5px;
+border-radius: 4px;
+`
+const Pmenor = styled.p`
+font-style: italic;
+font-size: smaller;
 `
 
 class Detalhes extends Component {
@@ -103,19 +118,17 @@ class Detalhes extends Component {
             <DetalhaLat>
                 <div>
                     <img src={this.state.dadosDeput.foto}/>
-                    <p>Nome: {this.state.dadosDeput.nome}</p>
-                    <p>Partido: {this.state.dadosDeput.partido}</p>
-                    <p>Deputado por (UF): {this.state.dadosDeput.uf}</p>
+                    <p>Nome: {this.state.dadosDeput.nome} - {this.state.dadosDeput.partido}/{this.state.dadosDeput.uf}</p>
                     <p>E-mail: {this.state.dadosDeput.email}</p>
                     <p>Telefone: {this.state.dadosDeput.tel}</p>
                 </div>
                 <div>
                     <h5>Selecione uma categoria de gastos:</h5>
-                    <p>Para que você vença o jogo, o valor do gasto da categoria escolhida tem que ser menor na comparação com a mesma categoria do deputado que o sistema vai escolher</p>
+                    <Pmenor>Lembrete: Para que você vença o jogo, o valor do gasto da categoria escolhida (por você) tem que ser menor na comparação com a mesma categoria do deputado que o sistema vai escolher aleatoriamente</Pmenor>
                     {this.state.mostraLoadingDespesas ? loadingDespesa : "" }
                     <ListaGastos>
                         {this.state.gastosDepSelec.map((item, key) =>
-                        <div key={key} id={key} onClick={this.atualizarSelecaoCatEValor}>Categoria: {item.categoria} - R$ {item.gasto.toFixed(2).toString().replace(".",",")}</div>
+                        <DivCats key={key} id={key} onClick={this.atualizarSelecaoCatEValor}>Categoria: {item.categoria} - R$ <strong>{item.gasto.toFixed(2).toString().replace(".",",")}</strong></DivCats>
                         )}
                     </ListaGastos>
                 </div>
