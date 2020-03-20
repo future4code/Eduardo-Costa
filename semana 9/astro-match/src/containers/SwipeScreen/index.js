@@ -71,8 +71,8 @@ export class SwipeScreen extends Component {
 					animationDirection={currentAnimation}
 					/> : (<Loader/>)}
 					<ButtonsWrapper>
-					<SentimentVeryDissatisfiedIcon color={'error'} fontSize={'large'} onClick={this.onChooseOption('dislike')} option="dislike"/>
-					<SentimentVerySatisfiedIcon style={{ color: green[500] }} fontSize={'large'} onClick={this.onChooseOption('like')} option="like"/>
+					<SentimentVeryDissatisfiedIcon style={{ cursor: "Pointer" }} color={'error'} fontSize={'large'} onClick={this.onChooseOption('dislike')} option="dislike"/>
+					<SentimentVerySatisfiedIcon style={{ color: green[500], cursor: "Pointer" }} fontSize={'large'} onClick={this.onChooseOption('like')} option="like"/>
 					</ButtonsWrapper>
 				</ContentWrapper>
 			</SwipeScreenWrapper>
