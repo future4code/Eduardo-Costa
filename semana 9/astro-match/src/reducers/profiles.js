@@ -28,7 +28,6 @@ export const profiles = (state = initialState, action) => {
                 matchesCount: action.payload.count
             };
         case "UPDATE_SELECTED_PROFILE":
-
             return {
                 ...state,
                 selectedProfile: action.payload.i

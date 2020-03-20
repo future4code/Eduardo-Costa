@@ -15,6 +15,7 @@ export const setProfile = profile => {
 export const getProfileToSwipe = () => async (dispatch, getState) => {
     const result = await axios.get(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${idProfile}/person`);
 
+    dispatch(setProfile(undefined));
     dispatch(setProfile(result.data.profile));
 
 };
@@ -24,11 +25,8 @@ export const chooseProfile = (id, choice) => async (dispatch, getState) => {
         id,
         choice
     }
-    console.log(newChoice)
-    const result = axios.post(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${idProfile}/choose-person`, newChoice)
-    console.log((await result).data.isMatch)
+    const result = await axios.post(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${idProfile}/choose-person`, newChoice)
 
-    dispatch(getProfileToSwipe())
     dispatch(countMatches())
 };
 

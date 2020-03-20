@@ -55,10 +55,11 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		goToSwipeScreen: () => dispatch(updateCurrentPage('SwipeScreen')),
 		getMatches: () => dispatch(getMatches()),
 		onSelectProfile: (i) => dispatch(onSelectProfile(i)),
-		goToProfileScreen: () => dispatch(updateCurrentPage('ProfileScreen'))
+		goToProfileScreen: () => dispatch(updateCurrentPage('ProfileScreen')),
+		goToSwipeScreen: () => dispatch(updateCurrentPage('SwipeScreen'))
+
 	}
 }
 export default connect(mapStateToProps, mapDispatchToProps)(MatchScreen)

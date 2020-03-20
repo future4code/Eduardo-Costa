@@ -45,14 +45,15 @@ export class SwipeScreen extends Component {
 		}
 
 		if (this.props.profileToSwipe) {
+			this.props.getProfileToSwipe()
 			this.props.chooseProfile(this.props.profileToSwipe.id, option === 'like')
 			
 		}
 	}
 
 	render() {
-		const {profileToSwipe, goToMatchScreen} = this.props
 		const {currentAnimation} = this.state
+		const {profileToSwipe, goToMatchScreen} = this.props
 
 		return (
 			<SwipeScreenWrapper>
@@ -94,10 +95,10 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		goToMatchScreen: () => dispatch(updateCurrentPage('MatchScreen')),
-		getProfileToSwipe: () => dispatch(getProfileToSwipe()),
 		chooseProfile: (id,choice) => dispatch(chooseProfile(id,choice)),
 		countMatches: () => dispatch(countMatches()),
+		getProfileToSwipe: () => dispatch(getProfileToSwipe()),
+		goToMatchScreen: () => dispatch(updateCurrentPage('MatchScreen'))
 	}
 }
 
