@@ -1,8 +1,9 @@
 import axios from 'axios'
+const baseUrl = 'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/'
 const idProfile = "eduardooo"
 
 export const clearSwipes = () => async (dispatch) => {
-    await axios.put(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${idProfile}/clear`)
+    await axios.put(`${baseUrl}${idProfile}/clear`)
     dispatch(countMatches())
 }
 
@@ -13,7 +14,7 @@ export const setProfile = profile => {
 };
 
 export const getProfileToSwipe = () => async (dispatch, getState) => {
-    const result = await axios.get(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${idProfile}/person`);
+    const result = await axios.get(`${baseUrl}${idProfile}/person`);
 
     dispatch(setProfile(undefined));
     dispatch(setProfile(result.data.profile));
@@ -25,7 +26,7 @@ export const chooseProfile = (id, choice) => async (dispatch, getState) => {
         id,
         choice
     }
-    const result = await axios.post(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${idProfile}/choose-person`, newChoice)
+    const result = await axios.post(`${baseUrl}${idProfile}/choose-person`, newChoice)
 
     dispatch(countMatches())
 };
@@ -37,7 +38,7 @@ export const setMatches = matches => {
 };
 
 export const getMatches = () => async (dispatch, getState) => {
-    const result = await axios.get(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${idProfile}/matches`);
+    const result = await axios.get(`${baseUrl}${idProfile}/matches`);
 
     dispatch(setMatches(result.data.matches));
 };
@@ -49,7 +50,7 @@ export const updateCountMatches = count => {
 };
 
 export const countMatches = () => async (dispatch, getState) => {
-    const result = await axios.get(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${idProfile}/matches`);
+    const result = await axios.get(`${baseUrl}${idProfile}/matches`);
 
     dispatch(updateCountMatches(result.data.matches.length));
 };
