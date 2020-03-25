@@ -2,12 +2,22 @@ import React from "react";
 import { ConnectedRouter } from "connected-react-router";
 import { Switch, Route } from "react-router-dom";
 import LoginPage from "../LoginPage";
+import PublicIndexPage from "../PublicIndexPage/index"
+import TripsChooser from '../../containers/TripsChooser/index'
+import TripsDetails from '../../containers/TripsDetails/index'
+import FormCandidate from '../../containers/FormCandidate/index'
+import Sucess from "../../containers/Sucess/index"
 
 
 
 
-const routes = {
-  root: "/"
+export const routes = {
+  root: "/",
+  adminIndex: "/admin",
+  tripList: "/trips",
+  tripDetails: "/tripsdetails",
+  candidate: "/candidate",
+  sucess: "/sucess"
   // Outras rotas aqui
 };
 
@@ -15,7 +25,12 @@ function Router(props) {
   return (
     <ConnectedRouter history={props.history}>
       <Switch>
-        <Route path={routes.root} component={LoginPage} />
+        <Route exact path={routes.root} component={PublicIndexPage} />
+        <Route exact path={routes.tripList} component={TripsChooser} />
+        <Route exact path={routes.tripDetails} component={TripsDetails} />
+        <Route exact path={routes.candidate} component={FormCandidate} />
+        <Route exact path={routes.sucess} component={Sucess} />
+        <Route exact path={routes.adminIndex} component={LoginPage} />
       </Switch>
     </ConnectedRouter>
   );

@@ -1,6 +1,13 @@
 
-# Created by https://www.gitignore.io/api/node,react,windows
-# Edit at https://www.gitignore.io/?templates=node,react,windows
+# Created by https://www.gitignore.io/api/node,code,react,windows,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=node,code,react,windows,visualstudiocode
+
+### Code ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 ### Node ###
 # Logs
@@ -121,6 +128,12 @@ psd
 thumb
 sketch
 
+### VisualStudioCode ###
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -147,4 +160,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/node,react,windows
+# End of https://www.gitignore.io/api/node,code,react,windows,visualstudiocode
