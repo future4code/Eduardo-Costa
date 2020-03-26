@@ -23,9 +23,15 @@ const trips = (state = initialState, action) => {
                 ...state,
                 tripsDetails: tripsDetailsCopy
             }
+        case 'CLEAN_TRIPS_DETAILS':
+            return {
+                ...state,
+                tripsDetails: []
+            }
         default:
             return state
     }
 }
 
 export default trips
+

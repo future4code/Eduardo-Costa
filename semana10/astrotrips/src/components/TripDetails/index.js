@@ -4,8 +4,11 @@ import {push} from "connected-react-router";
 import {selectTrip} from "../../actions/trips";
 import {routes} from "../../containers/Router";
 import Typography from '@material-ui/core/Typography';
-import {WrapperText, StyledTypographyY, StyledTypographyG} from './styled'
+import {WrapperText, StyledDelDiv, StyledButtonDel, StyledTypographyY, StyledTypographyG} from './styled'
 import {Divider} from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete';
+
+
 
 class TripDetails extends Component {
     constructor(props) {
@@ -16,7 +19,7 @@ class TripDetails extends Component {
 
     render() {
         return (
-                    <div key={this.props.id} onClick={() => {this.props.botaoAdicionaC(this.props.id)}}>
+                    <div key={this.props.id} onClick={() => {this.props.setSelected(this.props.id)}}>
                     <WrapperText elevation={2}>
                     <Typography color={'primary'} variant={'subtitle1'}><strong>{this.props.name}</strong></Typography>
                     <Divider />
@@ -32,7 +35,7 @@ class TripDetails extends Component {
                     :
                     <StyledTypographyG variant={'subtitle1'}>Candidatos: <strong>{this.props.candidates.length}</strong> - aprovados: <strong>{this.props.approved.length}</strong></StyledTypographyG>
                     }
-                        
+                    <StyledDelDiv><StyledButtonDel onClick={() => {this.props.deleteTrip(this.props.id)}}/></StyledDelDiv>
                     </WrapperText>
                     </div>
         )

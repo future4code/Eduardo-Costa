@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const baseUrl = 'https://us-central1-missao-newton.cloudfunctions.net/futureX/'
-const idProfile = "EduCosta"
+const idProfile = "EduCosta3"
 
 export const getTrips = () => async (dispatch) => {
     const response = await axios.get(`${baseUrl}${idProfile}/trips`);
@@ -37,5 +37,18 @@ export const newApply = (id, form) => async (dispatch) => {
         }
     })
 }
+export const deleteTrip = (id) => async (dispatch) => {
+    const response = await axios.delete(`${baseUrl}${idProfile}/trips/${id}`)
+}
 
+export const decideCandidate = (tripId, candidateId, boolean) => async (dispatch) => {
+    const token = sessionStorage.getItem("token");
+    const body = {"approve":boolean}
+    const response = await axios.put(`${baseUrl}${idProfile}/trips/${tripId}/candidates/${candidateId}/decide`,
+    body,
+        {headers: {auth: token}})
+    console.log(response)
+}
 
+export const cleanTripsDetails = () => ({type: 'CLEAN_TRIPS_DETAILS', payload: {
+}})
