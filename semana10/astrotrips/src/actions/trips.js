@@ -12,10 +12,19 @@ const setTrips = (trips) => ({type: 'SET_TRIPS', payload: {
     }})
 
 export const getTripsDetails = (id) => async (dispatch) => {
-    const response = await axios.get(`${baseUrl}${idProfile}/trip/${id}?=`);
-    console.log("id: ", id)
-    console.log("detalhes: ", response.data)
+    const token = sessionStorage.getItem("token");
+    const response = await axios.get(`${baseUrl}${idProfile}/trip/${id}`, {
+        headers: {
+            auth: token
+        }
+    })
+    console.log(response.data.trip)
+    dispatch(setTripsDetails(response.data.trip))
 }
+
+const setTripsDetails = (trips) => ({type: 'SET_TRIPS_DETAILS', payload: {
+    trips
+}})
 
 export const selectTrip = (trip) => ({type: 'SELECT_TRIP', payload: {
         trip
@@ -27,5 +36,6 @@ export const newApply = (id, form) => async (dispatch) => {
             "Content-Type": "application/json"
         }
     })
-	console.log(response.data)
 }
+
+

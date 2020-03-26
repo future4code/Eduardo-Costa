@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {push} from "connected-react-router";
+import {routes} from "../Router";
 import {Card, Button} from '@material-ui/core';
 import {CardContent} from './styled';
-import {routes} from "../Router";
 import {TypographyStyled} from './styled';
 
 

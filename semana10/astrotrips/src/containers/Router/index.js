@@ -7,9 +7,7 @@ import TripsChooser from '../../containers/TripsChooser/index'
 import TripsDetails from '../../containers/TripsDetails/index'
 import FormCandidate from '../../containers/FormCandidate/index'
 import Sucess from "../../containers/Sucess/index"
-
-
-
+import Dashboard from "../../containers/Dashboard/index"
 
 export const routes = {
   root: "/",
@@ -17,8 +15,8 @@ export const routes = {
   tripList: "/trips",
   tripDetails: "/tripsdetails",
   candidate: "/candidate",
-  sucess: "/sucess"
-  // Outras rotas aqui
+  sucess: "/sucess",
+  adminDashboard: "/dashboard"
 };
 
 function Router(props) {
@@ -31,6 +29,7 @@ function Router(props) {
         <Route exact path={routes.candidate} component={FormCandidate} />
         <Route exact path={routes.sucess} component={Sucess} />
         <Route exact path={routes.adminIndex} component={LoginPage} />
+        <Route exact path={routes.adminDashboard} component={Dashboard} />
       </Switch>
     </ConnectedRouter>
   );

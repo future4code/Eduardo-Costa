@@ -1,5 +1,6 @@
 const initialState = {
     trips: [],
+    tripsDetails: [],
     selectedTrip: ""
 }
 
@@ -14,6 +15,13 @@ const trips = (state = initialState, action) => {
             return {
                 ...state,
                 selectedTrip: action.payload.trip
+            }
+        case 'SET_TRIPS_DETAILS':
+            const tripsDetailsCopy = [...state.tripsDetails]
+            tripsDetailsCopy.push(action.payload.trips)
+            return {
+                ...state,
+                tripsDetails: tripsDetailsCopy
             }
         default:
             return state
