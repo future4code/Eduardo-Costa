@@ -25,8 +25,6 @@ export const setUser = (userData) => ({type: 'SET_USER', payload: {
 }})
 
 export const setLogout = () => (
-    sessionStorage.removeItem("token"),
-    sessionStorage.removeItem("user"),
     sessionStorage.clear(),
     {type: 'SET_LOGOUT', payload: {
     

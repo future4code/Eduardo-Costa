@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {push, goBack} from "connected-react-router";
+import {push} from "connected-react-router";
 import { routes } from "../Router";
 import {WrapperCardTrips, ButtonStyled, TypographyStyled} from './styled'
 

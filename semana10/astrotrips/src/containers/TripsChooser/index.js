@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {push, goBack} from "connected-react-router";
+import {goBack} from "connected-react-router";
 import GridListTrips from '../../components/GridListTrips/index'
 import {getTrips} from "../../actions/trips";
 import {WrapperDiv} from './styled'

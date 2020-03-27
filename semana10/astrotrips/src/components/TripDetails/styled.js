@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Paper, Typography, Button} from '@material-ui/core';
+import {Paper, Typography} from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 

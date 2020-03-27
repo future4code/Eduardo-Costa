@@ -1,15 +1,16 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {push} from "connected-react-router";
-import {selectTrip} from "../../actions/trips";
-import {routes} from "../../containers/Router";
-import {WrapperText, WrapperOpt, ApproveButton, WrapperInfo, StyledTypographyY, StyledTypographyG, ApproveCheckBoxIcon} from './styled'
+import {WrapperText, ReproveButton, ReproveIcon, WrapperOpt, ApproveButton, WrapperInfo, ApproveCheckBoxIcon} from './styled'
 import {Avatar, Divider, Typography} from '@material-ui/core';
 
 
 
 class CandidatesDetails extends Component {
 
+    gna = () => {
+        return (Math.floor(Math.random() * 9))
+    }
+    
     render() {
         return (
             <div key={
@@ -18,8 +19,10 @@ class CandidatesDetails extends Component {
                 <WrapperText elevation={2}>
                     <WrapperOpt>
                         <Avatar alt={this.props.name}
-                            src="https://picsum.photos/200"/>
+                            src={`https://picsum.photos/2${this.gna()}${this.gna()}`}
+                            />
                             <ApproveButton variant={'contained'} size={'small'} color={'secondary'} onClick={() => {this.props.approve(this.props.tripId, this.props.id, true)}}> <ApproveCheckBoxIcon />Aprovar</ApproveButton>
+                            <ReproveButton variant={'contained'} size={'small'} color={'secondary'} onClick={() => {this.props.approve(this.props.tripId, this.props.id, false)}}> <ReproveIcon />Reprovar</ReproveButton>
                     </WrapperOpt>
                     <WrapperInfo>
                         <Typography color={'primary'} variant={'subtitle2'}>

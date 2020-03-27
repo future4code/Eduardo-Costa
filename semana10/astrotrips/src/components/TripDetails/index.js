@@ -6,7 +6,6 @@ import {routes} from "../../containers/Router";
 import Typography from '@material-ui/core/Typography';
 import {WrapperText, StyledDelDiv, StyledButtonDel, StyledTypographyY, StyledTypographyG} from './styled'
 import {Divider} from '@material-ui/core';
-import DeleteIcon from '@material-ui/icons/Delete';
 
 
 

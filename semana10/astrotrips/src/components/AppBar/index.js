@@ -18,11 +18,11 @@ class ButtonAppBar extends Component {
         }
     }
     render() {
-        const {goToDashboard, user, setLogout} = this.props;
+        const {goToDashboard, setLogout} = this.props;
 
         const logado = (
             <LogArea>
-                <Avatar alt={user}
+                <Avatar
                     src="https://picsum.photos/200"/>
                 <Typography>{
                     this.props.user === null ? "" : this.props.user.email

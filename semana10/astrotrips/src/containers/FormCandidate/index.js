@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {push, goBack} from "connected-react-router";
+import {push} from "connected-react-router";
 import {newApply} from "../../actions/trips";
 import {TextFieldStyled, Wrapper, ButtonStyled, WrapperDiv} from './styled'
 import { routes } from "../Router";

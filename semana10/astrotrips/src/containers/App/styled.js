@@ -6,7 +6,7 @@ justify-content: center;
 text-align: center;
 align-content: center;
 align-items: center;
-max-height: 100vh;
+max-height: auto;
 max-width: 100vw;
 min-height: 100vh;
 min-width: 100vw;
