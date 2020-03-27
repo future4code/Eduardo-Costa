@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {Paper, Button, Typography} from '@material-ui/core';
 import CheckBoxIcon from '@material-ui/icons/CheckBox';
+import IndeterminateCheckBoxIcon from '@material-ui/icons/IndeterminateCheckBox';
 
 
 
@@ -42,5 +43,14 @@ cursor: pointer;
 `
 export const ApproveCheckBoxIcon = styled(CheckBoxIcon)`
 color: green;
+cursor: pointer;
+`
+export const ReproveButton = styled(Button)`
+color: red;
+background-color: red;
+cursor: pointer;
+`
+export const ReproveCheckBoxIcon = styled(IndeterminateCheckBoxIcon)`
+color: red;
 cursor: pointer;
 `

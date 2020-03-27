@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {push} from "connected-react-router";
 import {selectTrip} from "../../actions/trips";
 import {routes} from "../../containers/Router";
-import {WrapperText, WrapperOpt, ApproveButton, WrapperInfo, StyledTypographyY, StyledTypographyG, ApproveCheckBoxIcon} from './styled'
+import {WrapperText, WrapperOpt, ApproveButton, WrapperInfo, StyledTypographyY, StyledTypographyG, ApproveCheckBoxIcon, ReproveCheckBoxIcon, ReproveButton} from './styled'
 import {Avatar, Divider, Typography} from '@material-ui/core';
 
 
@@ -20,6 +20,7 @@ class CandidatesDetails extends Component {
                         <Avatar alt={this.props.name}
                             src="https://picsum.photos/200"/>
                             <ApproveButton variant={'contained'} size={'small'} color={'secondary'} onClick={() => {this.props.approve(this.props.tripId, this.props.id, true)}}> <ApproveCheckBoxIcon />Aprovar</ApproveButton>
+                            <ReproveButton variant={'contained'} size={'small'} color={'secondary'} onClick={() => {this.props.approve(this.props.tripId, this.props.id, false)}}> <ReproveCheckBoxIcon />Reprovar</ReproveButton>
                     </WrapperOpt>
                     <WrapperInfo>
                         <Typography color={'primary'} variant={'subtitle2'}>
