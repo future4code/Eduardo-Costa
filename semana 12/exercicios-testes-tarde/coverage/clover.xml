@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1586269456682" clover="3.2.0">
+  <project timestamp="1586269456682" name="All files">
+    <metrics statements="8" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="7" coveredmethods="5" elements="22" coveredelements="5" complexity="0" loc="8" ncloc="8" packages="2" files="7" classes="7"/>
+    <package name="src">
+      <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.js" path="C:\Users\Eduardo\Documents\gitlocal\Eduardo-Costa\semana 12\exercicios-testes-tarde\src\index.js">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.exercicios">
+      <metrics statements="5" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="6" coveredmethods="5"/>
+      <file name="ex1.js" path="C:\Users\Eduardo\Documents\gitlocal\Eduardo-Costa\semana 12\exercicios-testes-tarde\src\exercicios\ex1.js">
+        <metrics statements="5" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="2" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="cond" truecount="0" falsecount="5"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="ex2.js" path="C:\Users\Eduardo\Documents\gitlocal\Eduardo-Costa\semana 12\exercicios-testes-tarde\src\exercicios\ex2.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      </file>
+      <file name="ex3.js" path="C:\Users\Eduardo\Documents\gitlocal\Eduardo-Costa\semana 12\exercicios-testes-tarde\src\exercicios\ex3.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      </file>
+      <file name="ex4.js" path="C:\Users\Eduardo\Documents\gitlocal\Eduardo-Costa\semana 12\exercicios-testes-tarde\src\exercicios\ex4.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      </file>
+      <file name="ex5.js" path="C:\Users\Eduardo\Documents\gitlocal\Eduardo-Costa\semana 12\exercicios-testes-tarde\src\exercicios\ex5.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      </file>
+      <file name="ex6.js" path="C:\Users\Eduardo\Documents\gitlocal\Eduardo-Costa\semana 12\exercicios-testes-tarde\src\exercicios\ex6.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      </file>
+    </package>
+  </project>
+</coverage>

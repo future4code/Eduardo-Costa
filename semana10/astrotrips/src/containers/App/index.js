@@ -10,9 +10,6 @@ import { generateReducers } from "../../reducers";
 import { routerMiddleware } from "connected-react-router";
 import AppBar from "../../components/AppBar/index"
 import {Wrapper} from './styled'
-
-
-
 export const history = createBrowserHistory();
 
 const middlewares = [
