@@ -1,2 +1,0 @@
-semana 9/astro-match/.DS_Store
-semana 9/astro-match/src/.DS_Store
