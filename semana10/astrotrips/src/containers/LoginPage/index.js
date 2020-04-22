@@ -67,7 +67,7 @@ const mapStateToProps = state => ({user: state.login.user});
 
 const mapDispatchToProps = dispatch => ({
   doLogin: (user, pass) => dispatch(doLogin(user, pass)),
-  goToDasboard: () => dispatch(push(routes.adminDashboard))
+    goToDasboard: () => dispatch(push(routes.adminDashboard))
   
 
 
