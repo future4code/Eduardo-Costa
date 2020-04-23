@@ -1,0 +1,17 @@
+{
+  "name": "exercicio1eduardo",
+  "version": "0.0.1",
+  "description": "Exercicio 1 da aula de Node.Js da turma Sagan. Aluno Eduardo",
+  "main": "exercicio1.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node exercicio1.js"
+  },
+  "keywords": [
+    "sagan",
+    "eduardo",
+    "exercicio"
+  ],
+  "author": "Eduardo Costa",
+  "license": "ISC"
+}
