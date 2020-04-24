@@ -1,5 +1,5 @@
 {
-    "compilerOptions": {
+  "compilerOptions": {
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
@@ -7,7 +7,7 @@
     "sourceMap": true,
     "target": "es6",
     "module": "commonjs"
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules"]
-    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
