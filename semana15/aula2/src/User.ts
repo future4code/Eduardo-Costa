@@ -28,5 +28,11 @@ export default class User {
     public getName(): string {
         return this.name
     }
+
+    public introduceYourself(): string {
+        const welcomeMsg = `Olá! Bom dia, eu sou o ${this.name}`
+        return welcomeMsg
+    }
+
 }
 
