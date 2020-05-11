@@ -1,0 +1,17 @@
+{
+  "name": "Eclética",
+  "musics": [
+    {
+      "name": "I want it that way",
+      "artist": "Backstreet Boys",
+      "album": "Millennium",
+      "year": 1999
+    },
+    {
+      "name": "Meu disfarce",
+      "artist": "Chitãozinho e Xororó",
+      "album": "Meu disfarce",
+      "year": 1987
+    }
+  ]
+}
